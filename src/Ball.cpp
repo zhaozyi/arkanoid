@@ -4,7 +4,11 @@
 
 namespace arkanoid {
 
-// TODO: Implement me
+/* Class Members:
+    center: center of the ball
+    velocity: velocity of the ball
+    radius: radius of the ball
+*/
 Ball::Ball(Point c, int32_t r, Velocity v) : center{c.x, c.y}, velocity{v.vx, v.vy} {
   /* Arguments:
     c: center of ball
@@ -14,13 +18,13 @@ Ball::Ball(Point c, int32_t r, Velocity v) : center{c.x, c.y}, velocity{v.vx, v.
   radius = r;
 }
 
-// TODO: Implement me
+// get the velocity of this ball
 Velocity Ball::getVelocity() const { return velocity; }
 
-// TODO: Implement me
+// get the center point of this ball
 Point Ball::getCenter() const { return center; }
 
-// TODO: Implement me
+// get the radius of the ball
 int32_t Ball::getRadius() const { return radius; }
 
 // ------------ADDED FUNCTIONS-------------

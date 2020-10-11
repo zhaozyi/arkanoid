@@ -5,7 +5,13 @@
 
 namespace arkanoid {
 
-// TODO: Implement me
+/* Class Members:
+    worldBall: the ball in this world
+    worldPaddle: the paddle in this world
+    worldBS: bricks in this world
+    worldWidth: the width of the world
+    worldHeight: the height of the world
+*/
 World::World(int32_t w, int32_t h, Ball b, Paddle p, std::vector<Brick> bs) : 
 worldBall(b.getCenter(), b.getRadius(), b.getVelocity()),
 worldPaddle(p.getUpperLeft(), p.getPaddleWidth(), p.getPaddleHeight(), p.getVelocity()),
@@ -80,21 +86,21 @@ bool World::hasCollision(Point p1, int32_t w1, int32_t h1, Point p2, int32_t w2,
 
 
 
-// TODO: Implement me
+// get the width of the world
 int32_t World::getWidth() const { return worldWidth; }
 
-// TODO: Implement me
+// get the height of the world
 int32_t World::getHeight() const { return worldHeight; }
 
-// TODO: Implement me
+// get the status of the ball in this world
 Ball World::getBall() const { return Ball(worldBall.getCenter(), worldBall.getRadius(), worldBall.getVelocity()); }
 
-// TODO: Implement me
+// get the status of the paddle in this world
 Paddle World::getPaddle() const { 
   return Paddle(worldPaddle.getUpperLeft(), worldPaddle.getPaddleWidth(), worldPaddle.getPaddleHeight(), worldPaddle.getVelocity());
 }
 
-// TODO: Implement me
+// get the status of all the bricks in this world
 std::vector<Brick> World::getBricks() const { return std::vector<Brick>(worldBS.begin(), worldBS.end()); }
 
 

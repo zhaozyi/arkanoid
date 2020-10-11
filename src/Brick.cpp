@@ -4,7 +4,11 @@
 
 namespace arkanoid {
 
-// TODO: Implement me
+/* class members:
+  upperLeftCorner: the upper left corner vertex of this brick
+  width: width of brick
+  height: height of brick
+*/
 Brick::Brick(Point p, int32_t w, int32_t h) : upperLeftCorner{p.x, p.y} {
   /* Arguments:
     p: upper left corner of brick (closest to (0,0))
@@ -15,15 +19,16 @@ Brick::Brick(Point p, int32_t w, int32_t h) : upperLeftCorner{p.x, p.y} {
   height = h;
 }
 
-// TODO: Implement me
+// get the upperLeftCorner point's coordinate of this brick
 Point Brick::getUpperLeft() const { return upperLeftCorner; }
 
-// TODO: Implement me
+// get the lowerRight point's coordinate of this brick
 Point Brick::getLowerRight() const { return Point{upperLeftCorner.x + width, upperLeftCorner.y + height}; }
 
-// --------------ADDED FUNCTIONS-------------------
+// get the width of this brick
 int32_t Brick::getBrickWidth() const { return width; }
 
+// get the height of this brick
 int32_t Brick::getBrickHeight() const { return height; }
 
 
