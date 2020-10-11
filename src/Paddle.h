@@ -19,8 +19,17 @@ public:
   Point getUpperLeft() const;  // SKELETON
   Point getLowerRight() const; // SKELETON
   int32_t getVelocity() const; // SKELETON
+  // ADDED FUNCTIONS
+  int32_t getPaddleWidth() const;
+  int32_t getPaddleHeight() const;
+  void setLocation(Point p);
+  void setVelocity(Velocity v);
 
 private:
+  Point paddleUpperLeftCorner;
+  int32_t paddleWidth;
+  int32_t paddleHeight;
+  Velocity paddleVelocity;
 };
 
 // Additional logic to let std::cout work with Paddle objects

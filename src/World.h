@@ -7,6 +7,7 @@
 
 #include <iosfwd>
 #include <vector>
+#include <algorithm>
 
 namespace arkanoid {
 
@@ -44,6 +45,15 @@ public:
 
 private:
   // Add any instance variables you need here
+  int32_t worldWidth;
+  int32_t worldHeight;
+  Ball worldBall;
+  Paddle worldPaddle;
+  std::vector<Brick> worldBS;
+  bool ballExceeds() const;
+  bool paddleExceeds() const;
+  bool brickExceeds() const;
+  bool hasCollision(Point p1, int32_t w1, int32_t h1, Point p2, int32_t w2, int32_t h2) const;
 };
 
 // The type of the exception that needs to be thrown when the game is over

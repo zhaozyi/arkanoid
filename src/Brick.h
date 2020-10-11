@@ -20,9 +20,15 @@ public:
 
   Point getUpperLeft() const;  // SKELETON
   Point getLowerRight() const; // SKELETON
+  // NEWLY ADDED FUNCTIONS
+  int32_t getBrickWidth() const;
+  int32_t getBrickHeight() const;
 
 private:
   // Add any instance variables you need here
+  Point upperLeftCorner;
+  int32_t width;
+  int32_t height;
 };
 
 // Additional logic to let std::cout work with Brick objects

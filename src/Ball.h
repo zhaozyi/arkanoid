@@ -18,9 +18,15 @@ public:
   Velocity getVelocity() const; // SKELETON
   Point getCenter() const;      // SKELETON
   int32_t getRadius() const;    // SKELETON
+  // ADDED SETTER FUNCTIONS
+  void setLocation(Point p);
+  void setVelocity(Velocity v);
 
 private:
   // Add any instance variables you need here
+  Point center;
+  int32_t radius;
+  Velocity velocity;
 };
 
 // Additional logic to let std::cout work with Ball objects
